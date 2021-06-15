@@ -1,0 +1,14 @@
+### This is the main file you should modify to declare where is AOSP source code 
+### or if you need to import something.
+
+services:
+  droicker:
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t 
+    build: .
+    image: droicker:0.1
+    volumes:
+      - /dev/bus/usb/:/dev/bus/usb/
+    device_cgroup_rules:
+      - 'c 189:* rmw'
+    
