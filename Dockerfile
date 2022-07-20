@@ -30,6 +30,7 @@ wget
 RUN wget -P /usr/local/bin https://storage.googleapis.com/git-repo-downloads/repo --no-check-certificate; \
 wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip --no-check-certificate; \
 unzip /platform-tools-latest-linux.zip -d /usr/local/bin; \
+RUN echo "hola"
 rm /platform-tools-latest-linux.zip; \
 ln -s /usr/bin/python3 /usr/local/bin/python; \
 chmod 0500 /usr/local/bin/repo; \
